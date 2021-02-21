@@ -48,3 +48,10 @@ run.sh run
 [NotoSerifCJK-Regular.ttc](https://github.com/googlefonts/noto-cjk/blob/master/NotoSerifCJK-Regular.ttc) 
 
 
+动作检测模型下载，放置于models目录下面
+```
+链接: https://pan.baidu.com/s/1hE0faRd-JCPH3P-hdEw8LQ
+提取码: 98f9
+```
+
+
