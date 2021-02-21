@@ -79,7 +79,7 @@ parser.add_argument('--save_video', dest='save_video',
 parser.add_argument('--vis_fast', dest='vis_fast',
                     help='use fast rendering', action='store_true', default=False)
 parser.add_argument('--server', dest='server', type=str,
-                    help='server receiver result of detect', default="192.168.200.233:7008/api_show_result")
+                    help='server receiver result of detect', default="")
 parser.add_argument('--post_image', default=False, action='store_true',
                     help='post the image with corresponding result')
 parser.add_argument('--gap', type=int, default=8,

@@ -6,7 +6,6 @@ CKPT="pretrained_models/fast_res50_256x192.pth"
 
 
 # input 
-INDIR="examples/demo/"
 IMAGE="examples/demo/cross.jpg"
 WEBCAM="examples/video/throw.mp4"
 
@@ -41,12 +40,11 @@ function post_webcam() {
 }
 
 function image() {
-    SERVER="http://${HOST}:${PORT}/${API_INFO}"
     python scripts/demo_inference.py \
         --cfg ${CONFIG} \
         --checkpoint ${CKPT} \
         --image ${IMAGE} \
-        --server ${SERVER}
+        --save_img
 }
 
 function webcam() {
@@ -57,6 +55,15 @@ function webcam() {
         --webcam ${WEBCAM} \
         --gap ${GAP} \
         --server ${SERVER}
+}
+
+function test_simple_pose() {
+    INDIR="examples/simple_pose/"
+    python scripts/demo_inference.py \
+        --cfg ${CONFIG} \
+        --checkpoint ${CKPT} \
+        --indir ${INDIR} \
+        --save_img
 }
 
 function main() {

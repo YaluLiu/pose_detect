@@ -48,6 +48,7 @@ class DataWriter():
             from trackers.PoseFlow.poseflow_infer import PoseFlowWrapper
             self.pose_flow_wrapper = PoseFlowWrapper(save_path=os.path.join(opt.outputpath, 'poseflow'))
         
+        # self.act_model = action_model("stand_sit_model")
         self.act_model = action_model("cross_model")
 
     def start_worker(self, target):
@@ -143,7 +144,7 @@ class DataWriter():
                 final_result.append(result)
 
                 
-                if self.opt.server:
+                if len(self.opt.server) > 0:
                     import requests,json,copy
                     if self.opt.post_image:
                         result = trans_to_json([result])
